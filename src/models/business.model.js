@@ -8,6 +8,20 @@ const businessSchema = new mongoose.Schema({
         minLength: 2,
         maxLength: 100,
     },
+    email: {
+        type: String,
+        required: true,
+        match: /[^@ \t\r\n]+@[^@ \t\r\n]+\.[^@ \t\r\n]+/,
+    },
+    password: {
+        type: String,
+        required: true,
+    },
+    verified: {
+        type: Boolean,
+        default: false,
+        required: true,
+    },
     RFC: {
         type: String,
         required: true,
@@ -63,6 +77,11 @@ const businessSchema = new mongoose.Schema({
         state: { type: String, required: true },
         zipCode: { type: Number, required: true },
       },
+    cratedAt: {
+        type: Date,
+        default: Date.now,
+    },
+
 
 })
 

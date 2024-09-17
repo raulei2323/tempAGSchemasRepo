@@ -16,17 +16,7 @@ const schema = new mongoose.Schema({
     lastName: {
         type: String,
         required: false,
-        maxLength: 100,
-    },
-    birthDate: {
-        type: Date,
-        required: false,
-    },
-    bio: {
-        type: String,
-        required: false,
-        minLength: 2,
-        maxLength: 500,
+        maxLength: 100,  
     },
     email: {
         type: String,
@@ -41,6 +31,16 @@ const schema = new mongoose.Schema({
         type: Boolean,
         default: false,
         required: true,
+    },
+    birthDate: {
+        type: Date,
+        required: false,
+    },
+    bio: {
+        type: String,
+        required: false,
+        minLength: 2,
+        maxLength: 500,
     },
     cratedAt: {
         type: Date,

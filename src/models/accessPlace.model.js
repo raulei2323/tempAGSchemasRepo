@@ -31,4 +31,4 @@ const schema = new mongoose.Schema({
 
 
 })
-module.exports = mongoose.model("Access", accessSchema)
+module.exports = mongoose.model("AccessPlace", accessplaceSchema)
